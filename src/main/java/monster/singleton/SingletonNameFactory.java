@@ -1,7 +1,6 @@
-package main.java.monster.factory.standard;
+package main.java.monster.singleton;
 
 import main.java.monster.Util;
-import main.java.monster.factory.NameFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +8,7 @@ import java.util.List;
 /**
  * Created by Aaron on 5/11/2015.
  */
-public class SingletonNameFactory implements NameFactory {
+public class SingletonNameFactory {
     private static SingletonNameFactory uniqueInstance;
 
     private List<String> staffNameList = new ArrayList<String>();
@@ -94,37 +93,33 @@ public class SingletonNameFactory implements NameFactory {
         laNameList = haNameList;
     }
 
-    @Override
+
     public String getSwordName() {
         return swordNameList.get(Util.randInt(0, swordNameList.size()-1));
     }
 
-    @Override
+
     public String getAxeName() {
         return axeNameList.get(Util.randInt(0, axeNameList.size()-1));
     }
 
-    @Override
+
     public String getStaffName() {
         return staffNameList.get(Util.randInt(0, staffNameList.size()-1));
     }
 
-    @Override
     public String getHeavyArmorName() {
         return haNameList.get(Util.randInt(0, haNameList.size() - 1));
     }
 
-    @Override
     public String getLightArmorName() {
         return laNameList.get(Util.randInt(0, laNameList.size()-1));
     }
 
-    @Override
     public String getMagicArmorName() {
         return maNameList.get(Util.randInt(0, maNameList.size()-1));
     }
 
-    @Override
     public String getHeroName() {
         return nameList.get(Util.randInt(0, nameList.size()-1));
     }

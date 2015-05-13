@@ -14,11 +14,14 @@ public class main {
 
         printVersion();
         doStuff();
+
+        Integer test = 4;
+        Integer test2 = test%2;
     }
 
     public void doStuff() {
 
-        HeroGenerator heroGen = new HeroGeneratorFacade();
+        HeroGenerator heroGen = new HeroGeneratorFacade(3, 8);
         Hero barbarian = heroGen.generateBarbarian();
         Hero mage = heroGen.generateMage();
         Hero warrior = heroGen.generateWarrior();

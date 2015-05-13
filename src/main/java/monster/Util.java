@@ -8,7 +8,6 @@ import java.util.Random;
  * Created by Aaron on 4/30/2015.
  */
 public class Util {
-    private static List<String> nameList = Arrays.asList(new String[]{"Aaron", "Sam", "RJ", "Tom", "Bridget", "Zoe", "Vee", "Pete", "Mitesh", "Kevin"});
 
     public static Integer randInt(Integer lowerBound, Integer upperBound) {
 
@@ -23,7 +22,4 @@ public class Util {
         return randomNum;
     }
 
-    public static String nameGen() {
-        return nameList.get(randInt(0,9));
-    }
 }
